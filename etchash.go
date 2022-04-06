@@ -458,6 +458,7 @@ func (l *Light) Verify(block Block) bool {
 
 	// The actual check.
 	target := new(big.Int).Div(maxUint256, difficulty)
+	log.Printf("Checked share diff = %s",result)
 	return result.Big().Cmp(target) <= 0
 }
 
